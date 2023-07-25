@@ -1,10 +1,4 @@
-const rawLG = require("../data/lgas");
-const lgas = rawLG.map((item,  index)=>{
-  return {
-    id:item.name + item.state ,
-    ...item
-  }
-})
+const lgas = require("../data/lgas");
 const sortlgas = require("../utils/sortArray")
 
 function getAllLgas(property, desc) {

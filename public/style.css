@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -13,6 +17,7 @@ body{
 
 .top-head{
     font-size: max(1.5em, 1.5vw);
+    margin-top: 3em;
 }
 
 .top-p{
@@ -28,11 +33,11 @@ body{
     margin-top: 1.3em;
 }
 
-.route-container h4{
+ h4{
     font-size: max(1.2em, 1.2vw);   
 }
 
-.route-container p{
+p{
     font-size: max(.8em, .8vw);   
     margin-top: .8em;
 }
@@ -49,4 +54,40 @@ body{
 .route-container h6{
     font-size: max(1em, 1vw);
     margin-top: .5em;   
+}
+
+.home h4{
+font-size: max(1em, 1vw);
+margin-top: .8em;
+}
+
+.home p{
+    margin-block: 1em;
+}
+
+.home a{
+    color: red;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+ul a{
+    display: inline-block;
+    margin: 1em;
+    padding: .5em;
+    font-size: .8em;
+    background-color: aliceblue;
+    /* text-decoration: none; */
+    color: blue;
 }

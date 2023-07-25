@@ -1,10 +1,4 @@
-const rawCountries = require("../data/countries");
-const countries = rawCountries.map(item=>{
-  return {
-    id: item.name,
-    ...item
-  }
-})
+const countries= require("../data/countries");
 const sortCountries = require("../utils/sortArray")
 
 function getAllCountries(property, desc) {

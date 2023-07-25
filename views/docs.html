@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li> <a href="#countries">countries</a></li>
+        <li> <a href="#states">states</a></li>
+        <li> <a href="#lgas">lgas</a></li>
+        <li> <a href="#presidents">presidents</a></li>
+        <li> <a href="#governors">governors</a></li>
+        <li> <a href="/">home</a></li>
+
+
+
+
+      </ul>
+    </nav>
+    <h1 class="top-head">How to use it</h1>
+
+    <p class="top-p">
+      9jaworld can be used with any type of front end project that needs
+      information of countries, states, local governments or any past leaders in
+      Nigeria in the JSON format. you can use the below examples to check how it
+      works.
+    </p>
+
+    <div class="route-container" id="countries">
+      <h4>Countries:</h4>
+
+      <div>
+        <h6>Get all countries</h6>
+        <p>
+          <span>Route:</span>
+          <code>"ninejaworld-api.onrender.com/countries"</code>
+        </p>
+        <p>
+          <span>Sort:</span>
+          <code>"ninejaworld-api.onrender.com/countries?sort=name"</code> This
+          code sorts the countries by their name:
+        </p>
+        <p>
+          <span>Sort:</span>
+          <code
+            >"ninejaworld-api.onrender.com/countries?sort=name&desc=true"</code
+          >
+          by default the items are sorted in ascending order, to sort in
+          descending order use the desc parameter:
+        </p>
+      </div>
+
+      <div>
+        <h6>Get a single countries</h6>
+        <p>
+          Get a country by it ID:
+          <code>"ninejaworld-api.onrender.com/countries/:countryID"</code>
+        </p>
+      </div>
+
+      <div>
+        <h6>Search for countries</h6>
+        <p>
+          <span>Search: </span>You can search for countries by their name,
+          continent, currency and/or capital:
+          <code
+            >"ninejaworld-api.onrender.com/countries/search?name=niger"</code
+          >
+        </p>
+        <p>
+          <span>Sort: </span>This code searched for countries that the name
+          includes "land", sorts them by their name:
+          <code
+            >"ninejaworld-api.onrender.com/countries/search?name=land&sort=name"</code
+          >
+        </p>
+        <p>
+          <span>Desc:</span> by default the items are sorted in ascending order,
+          to sort in descending order use the desc parameter:
+          <code
+            >"ninejaworld-api.onrender.com/countries/search?name=land&sort=name&desc=true"</code
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="route-container" id="states">
+      <h4>States:</h4>
+
+      <div>
+        <h6>Get all states</h6>
+        <p>
+          <span>Route:</span> <code>"ninejaworld-api.onrender.com/states"</code>
+        </p>
+        <p>
+          <span>Sort:</span>
+          <code>"ninejaworld-api.onrender.com/states?sort=name"</code> This code
+          sorts the states by their name:
+        </p>
+        <p>
+          <span>Sort:</span>
+          <code>"ninejaworld-api.onrender.com/states?sort=name&desc=true"</code>
+          by default the items are sorted in ascending order, to sort in
+          descending order use the desc parameter:
+        </p>
+      </div>
+
+      <div>
+        <h6>Get a single states</h6>
+        <p>
+          Get a country by it ID:
+          <code>"ninejaworld-api.onrender.com/states/:stateID"</code>
+        </p>
+      </div>
+
+      <div>
+        <h6>Search for states</h6>
+        <p>
+          <span>Search: </span>You can search for states by their name,region
+          and/or capital:
+          <code>"ninejaworld-api.onrender.com/states/search?name=lagos"</code>
+        </p>
+        <p>
+          <span>Sort: </span>This code searched for states that the name
+          includes "ab", sorts them by their name:
+          <code
+            >"ninejaworld-api.onrender.com/states/search?name=ab&sort=name"</code
+          >
+        </p>
+        <p>
+          <span>Desc:</span> by default the items are sorted in ascending order,
+          to sort in descending order use the desc parameter:
+          <code
+            >"ninejaworld-api.onrender.com/states/search?name=ab&sort=name&desc=true"</code
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="route-container" id="lgas">
+      <h4>Local Governments Areas:</h4>
+
+      <div>
+        <h6>Get all lgas</h6>
+        <p>
+          <span>Route:</span> <code>"ninejaworld-api.onrender.com/lgas"</code>
+        </p>
+        <p>
+          <span>Sort:</span>
+          <code>"ninejaworld-api.onrender.com/lgas?sort=name"</code> This code
+          sorts the lgas by their name:
+        </p>
+        <p>
+          <span>Sort:</span>
+          <code>"ninejaworld-api.onrender.com/lgas?sort=name&desc=true"</code>
+          by default the items are sorted in ascending order, to sort in
+          descending order use the desc parameter:
+        </p>
+      </div>
+
+      <div>
+        <h6>Get a single lgas</h6>
+        <p>
+          Get a country by it ID:
+          <code>"ninejaworld-api.onrender.com/lgas/:lgID"</code>
+        </p>
+      </div>
+
+      <div>
+        <h6>Search for lgas</h6>
+        <p>
+          <span>Search: </span>You can search for lgas by their name and/or
+          state:
+          <code>"ninejaworld-api.onrender.com/lgas/search?name=lagos"</code>
+        </p>
+        <p>
+          <span>Sort: </span>This code searched for lgas that the name includes
+          "ab", sorts them by their name:
+          <code
+            >"ninejaworld-api.onrender.com/lgas/search?name=ab&sort=name"</code
+          >
+        </p>
+        <p>
+          <span>Desc:</span> by default the items are sorted in ascending order,
+          to sort in descending order use the desc parameter:
+          <code
+            >"ninejaworld-api.onrender.com/lgas/search?name=ab&sort=name&desc=true"</code
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="route-container" id="presidents">
+      <h4>Presidents:</h4>
+
+      <div>
+        <h6>Get all presidents</h6>
+        <p>
+          <span>Route:</span> <code>"ninejaworld-api.onrender.com/presidents"</code>
+        </p>
+        <p>
+          <span>Sort:</span>
+          <code>"ninejaworld-api.onrender.com/presidents?sort=name"</code> This code
+          sorts the presidents by their name:
+        </p>
+        <p>
+          <span>Sort:</span>
+          <code>"ninejaworld-api.onrender.com/presidents?sort=name&desc=true"</code>
+          by default the items are sorted in ascending order, to sort in
+          descending order use the desc parameter:
+        </p>
+      </div>
+
+      <div>
+        <h6>Get a single presidents</h6>
+        <p>
+          Get a country by it ID:
+          <code>"ninejaworld-api.onrender.com/presidents/:presidentID"</code>
+        </p>
+      </div>
+
+      <div>
+        <h6>Search for presidents</h6>
+        <p>
+          <span>Search: </span>You can search for presidents by their name and/or
+          title:
+          <code>"ninejaworld-api.onrender.com/presidents/search?name=babangida"</code>
+        </p>
+        <p>
+          <span>Sort: </span>This code searched for presidents that their title includes
+          "head", sorts them by their name:
+          <code
+            >"ninejaworld-api.onrender.com/presidents/search?title=head&sort=name"</code
+          >
+        </p>
+        <p>
+          <span>Desc:</span> by default the items are sorted in ascending order,
+          to sort in descending order use the desc parameter:
+          <code
+            >"ninejaworld-api.onrender.com/presidents/search?title=head&sort=name&desc=true"</code
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="route-container" id="governors">
+      <h4>Governors:</h4>
+
+      <div>
+        <h6>Get all governors</h6>
+        <p>
+          <span>Route:</span> <code>"ninejaworld-api.onrender.com/governors"</code>
+        </p>
+        <p>
+          <span>Sort:</span>
+          <code>"ninejaworld-api.onrender.com/governors?sort=name"</code> This code
+          sorts the governors by their name:
+        </p>
+        <p>
+          <span>Sort:</span>
+          <code>"ninejaworld-api.onrender.com/governors?sort=name&desc=true"</code>
+          by default the items are sorted in ascending order, to sort in
+          descending order use the desc parameter:
+        </p>
+      </div>
+
+      <div>
+        <h6>Get a single governors</h6>
+        <p>
+          Get a country by it ID:
+          <code>"ninejaworld-api.onrender.com/governors/:governorID"</code>
+        </p>
+      </div>
+
+      <div>
+        <h6>Search for governors</h6>
+        <p>
+          <span>Search: </span>You can search for governors by their name and/or
+          state they governed:
+          <code>"ninejaworld-api.onrender.com/governors/search?name=fashola"</code>
+        </p>
+        <p>
+          <span>Sort: </span>This code searched for governors that governed lagos state and sorts them by their name:
+          <code
+            >"ninejaworld-api.onrender.com/governors/search?state=lagos&sort=name"</code
+          >
+        </p>
+        <p>
+          <span>Desc:</span> by default the items are sorted in ascending order,
+          to sort in descending order use the desc parameter:
+          <code
+            >"ninejaworld-api.onrender.com/governors/search?state=lagos&sort=name&desc=true"</code
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
