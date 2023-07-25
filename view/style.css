@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+    padding: 1em;
+    /* text-align: center; */
+}
+
+.top-head{
+    font-size: max(1.5em, 1.5vw);
+}
+
+.top-p{
+    font-size: max(.8em, .8vw);   
+    margin-top: .5em;
+}
+
+.route-container{
+    margin-top: 1.3em;
+}
+
+.route-container div{
+    margin-top: 1.3em;
+}
+
+.route-container h4{
+    font-size: max(1.2em, 1.2vw);   
+}
+
+.route-container p{
+    font-size: max(.8em, .8vw);   
+    margin-top: .8em;
+}
+
+.route-container p span{
+   font-weight: bold;
+}
+
+.route-container p code{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(203, 0, 0);
+ }
+
+.route-container h6{
+    font-size: max(1em, 1vw);
+    margin-top: .5em;   
+}

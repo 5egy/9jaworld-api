@@ -1,21 +1,21 @@
 const express = require("express");
 const url = require("url");
-const statesRouter = express.Router();
+const govRouter = express.Router();
 const {
-  getAllStates,
-  getSingleState,
-  searchStates,
-} = require("../controller/statesController");
+  getAllStatesGov,
+  getSingleGov,
+  searchGov,
+} = require("../controller/govController");
 
-statesRouter.get("/states", (req, res) => {
+govRouter.get("/governors", (req, res) => {
   try {
     const query = url.parse(req.url, true).query;
-    const states = getAllStates(query.sort, query.desc);
+    const gov = getAllStatesGov(query.sort, query.desc);
     res.status(200).send({
       statusCode: res.statusCode,
       statusText: "Ok",
-      total: states.length,
-      data: states,
+      total: gov.length,
+      data: gov,
     });
   } catch (err) {
     res.status(500).send({
@@ -26,15 +26,16 @@ statesRouter.get("/states", (req, res) => {
   }
 });
 
-statesRouter.get("/states/search", (req, res) => {
+govRouter.get("/governors/search", (req, res) => {
   try {
     const query = url.parse(req.url, true).query;
-    const states = searchStates({ ...query });
+    const gov = searchGov(query);
+
     res.status(200).send({
       statusCode: res.statusCode,
       statusText: "Ok",
-      total: states.length,
-      data: states,
+      total: gov.length,
+      data: gov,
     });
   } catch (err) {
     res.status(500).send({
@@ -45,13 +46,13 @@ statesRouter.get("/states/search", (req, res) => {
   }
 });
 
-statesRouter.get("/states/:id", (req, res) => {
+govRouter.get("/governors/:id", (req, res) => {
   try {
-    const state = getSingleState(req.params.id);
+    const LG = getSingleGov(req.params.id);
     res.status(200).send({
       statusCode: res.statusCode,
       statusText: "Ok",
-      data: state,
+      data: LG,
     });
   } catch (err) {
     res.status(500).send({
@@ -62,4 +63,4 @@ statesRouter.get("/states/:id", (req, res) => {
   }
 });
 
-module.exports = statesRouter;
+module.exports = govRouter;

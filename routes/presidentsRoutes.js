@@ -1,21 +1,21 @@
 const express = require("express");
 const url = require("url");
-const statesRouter = express.Router();
+const presRouter = express.Router();
 const {
-  getAllStates,
-  getSingleState,
-  searchStates,
-} = require("../controller/statesController");
+  getAllPresidents,
+  getSinglePresident,
+  searchPresidents,
+} = require("../controller/presidentController");
 
-statesRouter.get("/states", (req, res) => {
+presRouter.get("/presidents", (req, res) => {
   try {
     const query = url.parse(req.url, true).query;
-    const states = getAllStates(query.sort, query.desc);
+    const pres = getAllPresidents(query.sort, query.desc);
     res.status(200).send({
       statusCode: res.statusCode,
       statusText: "Ok",
-      total: states.length,
-      data: states,
+      total: pres.length,
+      data: pres,
     });
   } catch (err) {
     res.status(500).send({
@@ -26,15 +26,15 @@ statesRouter.get("/states", (req, res) => {
   }
 });
 
-statesRouter.get("/states/search", (req, res) => {
+presRouter.get("/presidents/search", (req, res) => {
   try {
     const query = url.parse(req.url, true).query;
-    const states = searchStates({ ...query });
+    const pres = searchPresidents(query);
     res.status(200).send({
       statusCode: res.statusCode,
       statusText: "Ok",
-      total: states.length,
-      data: states,
+      total: pres.length,
+      data: pres,
     });
   } catch (err) {
     res.status(500).send({
@@ -45,13 +45,13 @@ statesRouter.get("/states/search", (req, res) => {
   }
 });
 
-statesRouter.get("/states/:id", (req, res) => {
+presRouter.get("/presidents/:id", (req, res) => {
   try {
-    const state = getSingleState(req.params.id);
+    const pres = getSinglePresident(req.params.id);
     res.status(200).send({
       statusCode: res.statusCode,
       statusText: "Ok",
-      data: state,
+      data: pres,
     });
   } catch (err) {
     res.status(500).send({
@@ -62,4 +62,4 @@ statesRouter.get("/states/:id", (req, res) => {
   }
 });
 
-module.exports = statesRouter;
+module.exports = presRouter;

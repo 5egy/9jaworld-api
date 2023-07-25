@@ -1,21 +1,21 @@
 const express = require("express");
 const url = require("url");
-const statesRouter = express.Router();
 const {
-  getAllStates,
-  getSingleState,
-  searchStates,
-} = require("../controller/statesController");
+  getAllLgas,
+  getSingleLG,
+  searchLG,
+} = require("../controller/lgasController");
+const lgRouter = express.Router();
 
-statesRouter.get("/states", (req, res) => {
+lgRouter.get("/lgas", (req, res) => {
   try {
     const query = url.parse(req.url, true).query;
-    const states = getAllStates(query.sort, query.desc);
+    const lgas = getAllLgas(query.sort, query.desc);
     res.status(200).send({
       statusCode: res.statusCode,
       statusText: "Ok",
-      total: states.length,
-      data: states,
+      total: lgas.length,
+      data: lgas,
     });
   } catch (err) {
     res.status(500).send({
@@ -26,15 +26,15 @@ statesRouter.get("/states", (req, res) => {
   }
 });
 
-statesRouter.get("/states/search", (req, res) => {
+lgRouter.get("/lgas/search", (req, res) => {
   try {
     const query = url.parse(req.url, true).query;
-    const states = searchStates({ ...query });
+    const lgas = searchLG({ ...query });
     res.status(200).send({
       statusCode: res.statusCode,
       statusText: "Ok",
-      total: states.length,
-      data: states,
+      total: lgas.length,
+      data: lgas,
     });
   } catch (err) {
     res.status(500).send({
@@ -45,13 +45,13 @@ statesRouter.get("/states/search", (req, res) => {
   }
 });
 
-statesRouter.get("/states/:id", (req, res) => {
+lgRouter.get("/lgas/:id", (req, res) => {
   try {
-    const state = getSingleState(req.params.id);
+    const LG = getSingleLG(req.params.id);
     res.status(200).send({
       statusCode: res.statusCode,
       statusText: "Ok",
-      data: state,
+      data: LG,
     });
   } catch (err) {
     res.status(500).send({
@@ -61,5 +61,4 @@ statesRouter.get("/states/:id", (req, res) => {
     });
   }
 });
-
-module.exports = statesRouter;
+module.exports = lgRouter;

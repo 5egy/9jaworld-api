@@ -1,6 +1,74 @@
 const states = [
   {
+    name: "Abuja",
+    id: "Abuja231339",
+    region: "Federal Capital Territory",
+    population: 2313392,
+    LGA: ["Abuja Municipal", "Bwari", "Gwagwalada", "Kuje", "Kwali"],
+    capital: "Abuja",
+    motto: "Center of Unity",
+    created: "February 3, 1976",
+    area: "783 km²",
+    universities: [
+      "University of Abuja",
+      "National Open University of Nigeria",
+    ],
+    polytechnics: ["Abuja Polytechnic"],
+    metropolis: ["Abuja"],
+    senators: [
+      {
+        name: "Okafor Chukwuka",
+        party: "APC",
+      },
+      {
+        name: "George Sekibo",
+        party: "PDP",
+      },
+    ],
+    houseOfReps: [
+      {
+        name: "Emeka Nwajiuba",
+        constituency: "Ahoada East/West",
+        party: "APC",
+      },
+      {
+        name: "Julius Ihonvbere",
+        constituency: "Etche/Omuma",
+        party: "APC",
+      },
+      {
+        name: "Blessing Onuh",
+        constituency: "Ikwerre",
+        party: "PDP",
+      },
+      {
+        name: "Festus Anyawu",
+        constituency: "Obio/Akpor",
+        party: "APC",
+      },
+      {
+        name: "Peter Akpatason",
+        constituency: "Ikwerre/Emohua",
+        party: "APC",
+      },
+    ],
+    governors: [
+      {
+        name: "Mohammed Sani Bello",
+        tenure: "2011-2019",
+      },
+      {
+        name: "Bello Muhammad Matawalle",
+        tenure: "2019-Present",
+      },
+    ],
+    shortDescription:
+      "Abuja is the capital of Nigeria. It is a planned city, and was created in 1976 to replace Lagos as the capital.",
+    wikipediaLink: "https://en.wikipedia.org/wiki/Abuja",
+  },
+  {
     name: "Zamfara",
+    id:"Zamfara 3771189",
     region: "North-West",
     population: 3771189,
     LGA: [
@@ -87,6 +155,7 @@ const states = [
   },
   {
     name: "Rivers",
+    id:"Rivers5206930",
     region: "South-South",
     population: 5206930,
     LGA: [
@@ -107,6 +176,7 @@ const states = [
       "Oyigbo",
     ],
     capital: "Port Harcourt",
+    id:"PH5206930",
     motto: "The Treasure Base of the Nation",
     created: "May 27, 1967",
     area: "11,077 km²",
@@ -175,6 +245,7 @@ const states = [
   {
     name: "Plateau",
     region: "North-Central",
+    id: "Plateau5206930",
     population: 3582672,
     LGA: [
       "Barkin Ladi",
@@ -192,6 +263,7 @@ const states = [
       "Wase",
     ],
     capital: "Jos",
+    id: "Jos5206930",
     motto: "The Home of Peace and Tourism",
     created: "February 3, 1976",
     area: "24,450 km²",
@@ -259,6 +331,7 @@ const states = [
   {
     name: "Ebonyi",
     region: "South-East",
+    id: "Ebonyi5206930",
     population: 3046616,
     LGA: [
       "Afikpo North",
@@ -327,6 +400,7 @@ const states = [
   {
     name: "Benue",
     region: "North-Central",
+    id: "Benue5206930",
     population: 5189478,
     LGA: [
       "Ado",
@@ -419,6 +493,7 @@ const states = [
     name: "Yobe",
     region: "North-East",
     population: 3885570,
+    id: "Yobe5206930",
     LGA: [
       "Baga",
       "Damaturu",
@@ -493,6 +568,7 @@ const states = [
   },
   {
     name: "Taraba",
+    id: "Taraba5206930",
     region: "North-East",
     population: 3224460,
     LGA: [
@@ -583,6 +659,7 @@ const states = [
   },
   {
     name: "Sokoto",
+    id: "Sokoto5206930",
     region: "North-West",
     population: 5656155,
     LGA: [
@@ -639,6 +716,7 @@ const states = [
   },
   {
     name: "Edo",
+    id: "Edo5206930",
     region: "South-South",
     population: 6498874,
     LGA: [
@@ -736,6 +814,7 @@ const states = [
   },
   {
     name: "Nasarawa",
+    id: "Nasarawa5206930",
     region: "North-Central",
     population: 3513806,
     LGA: [
@@ -825,6 +904,7 @@ const states = [
   },
   {
     name: "Borno",
+    id: "Borno5206930",
     region: "North-East",
     population: 6116820,
     LGA: [
@@ -913,6 +993,7 @@ const states = [
   },
   {
     name: "Niger",
+    id: "Niger5206930",
     region: "North-Central",
     population: 4477033,
     LGA: [
@@ -999,6 +1080,7 @@ const states = [
   },
   {
     name: "Kwara",
+    id: "Kwara5206930",
     region: "North-Central",
     population: 3328277,
     LGA: [
@@ -1101,6 +1183,7 @@ const states = [
   },
   {
     name: "Kogi",
+    id: "Kogi5206930",
     region: "North-Central",
     population: 4124707,
     LGA: [
@@ -1199,6 +1282,7 @@ const states = [
   },
   {
     name: "Kebbi",
+    id: "Kebbi5206930",
     region: "North-West",
     population: 3825824,
     LGA: [
@@ -1283,6 +1367,7 @@ const states = [
   },
   {
     name: "Katsina",
+    id: "Katsina5206930",
     region: "North-West",
     population: 6511764,
     LGA: [
@@ -1364,7 +1449,7 @@ const states = [
       },
       {
         name: "Babagana Mangal",
-        tenure: 1978 - 1983,
+        tenure: "1978 - 1983",
       },
       {
         name: "Aminu Masari",
@@ -1389,6 +1474,7 @@ const states = [
   },
   {
     name: "Kano",
+    id: "Kano5206930",
     region: "North-West",
     population: 13201096,
     LGA: [
@@ -1500,6 +1586,7 @@ const states = [
   },
   {
     name: "Kaduna",
+    id: "Kaduna5206930",
     region: "North-West",
     population: 9229443,
     LGA: [
@@ -1611,6 +1698,7 @@ const states = [
   },
   {
     name: "Jigawa",
+    id: "Jigawa5206930",
     region: "North-West",
     population: 4099094,
     LGA: [
@@ -1700,6 +1788,7 @@ const states = [
   },
 
   {
+    id: "Imo5206930",
     name: "Imo",
     region: "South-East",
     population: 4928023,
@@ -1775,11 +1864,11 @@ const states = [
       },
       {
         name: "Ikedi Ohakim",
-        tenure: 2007 - 2011,
+        tenure: "2007 - 2011",
       },
       {
         name: "Rochas Okorocha",
-        tenure: 2011 - 2019,
+        tenure: "2011 - 2019",
       },
       {
         name: "Emeka Ihedioha",
@@ -1795,6 +1884,7 @@ const states = [
     wikipediaLink: "https://en.wikipedia.org/wiki/Imo_State",
   },
   {
+    id: "Enugu5206930",
     name: "Enugu",
     region: "South-East",
     population: 4437134,
@@ -1874,6 +1964,7 @@ const states = [
     wikipediaLink: "https://en.wikipedia.org/wiki/Enugu_State",
   },
   {
+    id: "Delta5206930",
     name: "Delta",
     region: "South-South",
     population: 5636100,
@@ -1971,6 +2062,7 @@ const states = [
 
   {
     name: "Cross River",
+    id: "CR5206930",
     region: "South-South",
     population: 4325572,
     LGA: [
@@ -2052,6 +2144,7 @@ const states = [
 
   {
     name: "Gombe",
+    id: "Gombe5206930",
     region: "North-East",
     population: 2801123,
     LGA: [
@@ -2133,6 +2226,7 @@ const states = [
   },
   {
     name: "Bayelsa",
+    id: "Bayelsa5206930",
     region: "South-South",
     population: 2111061,
     LGA: [
@@ -2218,6 +2312,7 @@ const states = [
   },
   {
     name: "Bauchi",
+    id: "Bauchi5206930",
     region: "North-East",
     population: 4627685,
     LGA: [
@@ -2311,6 +2406,7 @@ const states = [
   },
   {
     name: "Anambra",
+    id: "Anambra5206930",
     region: "South-East",
     population: 14465213,
     LGA: [
@@ -2406,6 +2502,7 @@ const states = [
   },
   {
     name: "Akwa Ibom",
+    id: "AkwaIbom5206930",
     region: "South-South",
     population: 5308203,
     LGA: [
@@ -2507,6 +2604,7 @@ const states = [
   },
   {
     name: "Abia",
+    id: "Abia5206930",
     region: "South-East",
     population: 3727347,
     LGA: [
@@ -2606,6 +2704,7 @@ const states = [
   },
   {
     name: "Adamawa",
+    id: "Adamawa5206930",
     region: "North-East",
     population: 3546109,
     LGA: [
@@ -2732,6 +2831,7 @@ const states = [
   },
   {
     name: "Ekiti",
+    id: "Ekiti5206930",
     region: "south-west",
     population: 3460877,
     LGA: [
@@ -2836,6 +2936,7 @@ const states = [
   },
   {
     name: "Ondo",
+    id: "Ondo5206930",
     region: "south-west",
     population: 3460877,
     LGA: [
@@ -2966,6 +3067,7 @@ const states = [
   },
 
   {
+  id: "Ogun5206930",
     name: "Ogun",
     region: "south-west",
     population: 3751140,
@@ -3103,6 +3205,7 @@ const states = [
      If you are looking for a place to experience the rich culture and history of Nigeria, Ogun state is a great place to visit. `,
   },
   {
+    id: "Lagos5206930",
     name: "Lagos",
     region: "south-west",
     population: 21422979,
@@ -3245,6 +3348,7 @@ const states = [
     `,
   },
   {
+    id: "Oyo5206930",
     name: "Oyo",
     region: "south-west",
     population: 7840864,
@@ -3478,6 +3582,7 @@ const states = [
     If you are looking for a place to experience the rich culture and history of Nigeria, Oyo state is a great place to visit.`,
   },
   {
+    id: "Osun5206930",
     name: "Osun",
     region: "south-west",
     population: 9113605,
