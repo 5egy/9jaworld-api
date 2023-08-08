@@ -1,4 +1,4 @@
-const lgas = [
+const all_lgas = [
   {
     id: "Agbado-Oke-OdoLagos",
     name: "Agbado-Oke-Odo",
@@ -4429,4 +4429,4 @@ const lgas = [
   },
 ];
 
-module.exports = lgas
+module.exports = all_lgas

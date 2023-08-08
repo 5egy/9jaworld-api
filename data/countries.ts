@@ -1,4 +1,4 @@
-const countries = [
+const allCountries = [
   {
     id: "Afghanistan",
     name: "Afghanistan",
@@ -1860,4 +1860,4 @@ const countries = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_Zimbabwe.svg/1200px-Flag_of_Zimbabwe.svg.png",
   },
 ];
-module.exports = countries;
+module.exports = allCountries;
