@@ -1,4 +1,4 @@
-function sortArrays(array, property, desc) {
+function sortArrays(array: any[], property:string, desc:string) {
     if (property) {
       if (property === "population" && desc)
         return array.sort((a, b) => b[property] - a[property]);

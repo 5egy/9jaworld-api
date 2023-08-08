@@ -1,4 +1,4 @@
-const states = [
+const allNGStates = [
   {
     name: "Abuja",
     id: "Abuja231339",
@@ -176,7 +176,6 @@ const states = [
       "Oyigbo",
     ],
     capital: "Port Harcourt",
-    id:"PH5206930",
     motto: "The Treasure Base of the Nation",
     created: "May 27, 1967",
     area: "11,077 km²",
@@ -263,7 +262,6 @@ const states = [
       "Wase",
     ],
     capital: "Jos",
-    id: "Jos5206930",
     motto: "The Home of Peace and Tourism",
     created: "February 3, 1976",
     area: "24,450 km²",
@@ -3726,4 +3724,4 @@ const states = [
   },
 ];
 
-module.exports = states;
+module.exports = allNGStates;

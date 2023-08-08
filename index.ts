@@ -1,37 +1,37 @@
-const express = require("express");
-const app = express();
+const Express = require("express");
+const app = Express();
 const path = require('path');
-const statesRouter = require("./routes/statesRoute")
+const states_Router = require("./routes/statesRoute")
 const countriesRouter = require("./routes/countriesRoute")
 const lgasRouter = require("./routes/lgasRoutes")
-const govRouter = require("./routes/govRoutes")
-const presRouter = require("./routes/presidentsRoutes");
+const gov_Router = require("./routes/govRoutes")
+const pres_Router = require("./routes/presidentsRoutes");
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(Express.static(path.join(__dirname, 'public')));
 
-app.get("/", (req, res)=>{
+app.get("/", (req: any, res:any)=>{
   res.status(200).sendFile(path.join(__dirname, 'views', 'index.html'));
-}).get("/home", (req, res)=>{
+}).get("/home", (req:any, res:any)=>{
   res.status(200).sendFile(path.join(__dirname, 'views', 'index.html'));
-}).get("/docs", (req, res)=>{
+}).get("/docs", (req:any, res:any)=>{
   res.status(200).sendFile(path.join(__dirname, 'views', 'docs.html'));
 })
 
-app.use(statesRouter)
+app.use(states_Router)
 app.use(countriesRouter)
 app.use(lgasRouter)
-app.use(govRouter)
-app.use(presRouter)
+app.use(gov_Router)
+app.use(pres_Router)
 
 
-app.all("/*", (req, res)=>{
+app.all("/*", (req:any, res:any)=>{
   res.status(404).send({
     error: "Route not available"
   })
 })
 
 
-app.listen(5000, (err) => {
+app.listen(5000, (err:any) => {
   console.log("SERVER RUNNING oN 5000");
 });
 
